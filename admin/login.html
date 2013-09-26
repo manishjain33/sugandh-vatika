@@ -10,7 +10,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="/sugandh-vatika/js/bootstrap.min.js"></script>
     <script src="/sugandh-vatika/js/sha256.min.js"></script>
-    <script>window.sv['pageID'] = "admin.signin";</script>
+    <script src="/sugandh-vatika/js/jquery.validate.min.js"></script>
+    <script src="/sugandh-vatika/js/sv.min.js"></script>
+    <script>window.sv = { 'pageID': "admin.signin" };</script>
 
     <style type="text/css">
       body {
@@ -54,10 +56,10 @@
 <body>
         <div class="container">
 
-      <form class="form-signin" method="post" action="/embarc-utils/php/main.php?util=login&fx=login" onsubmit="this.hash.value = CryptoJS.SHA256(this.hash.value).toString(CryptoJS.enc.Hex);">
+      <form class="form-signin" id="signInForm">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="input-block-level" placeholder="Username" name="username">
-        <input type="password" class="input-block-level" placeholder="Password" name="password">
+        <input type="text" class="input-block-level" placeholder="Username" name="username" required>
+        <input type="password" class="input-block-level" placeholder="Password" name="password" required>
         <label class="checkbox">
           <input type="checkbox" value="remember-me" name="remember" id="remember" /> Remember me
         </label>

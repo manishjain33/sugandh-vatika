@@ -11,6 +11,15 @@ class MYSQL_INTERFACE
 		$this->db_connection = $this->db_object->connect();
 	}
 	
-	
+	public function getUserDetails($username) {
+		$query = "SELECT * from users where username='".$this->db_object->escapeString($username)."'";
+		$result = $this->db_object->query_db($query);
+		if($result == false) return false;
+		
+		$row = $result->fetch_assoc();
+		$result->free();
+		
+		return $row;
+	}
 }
 ?>

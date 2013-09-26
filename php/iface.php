@@ -1,22 +1,23 @@
 <?php
-session_start();
-
-switch($_GET['mode'])
+switch($_GET['fx'])
 {
 	case "sign":
-		sign($_GET["fx"]);
+		sign($_GET["op"]);
 		break;
 }
 
-function sign($fx) {
+function sign($op) {
 	require_once("sign.php");
+	$sign = new SIGN();
 	
-	switch($fx)
+	switch($op)
 	{
 		case "in":
+			echo $sign->verify($_POST['username'], $_POST['password']);
 			break;
 			
 		case "out":
+			$sign->out();
 			break;
 	}
 }

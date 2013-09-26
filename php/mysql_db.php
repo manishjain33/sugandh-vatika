@@ -1,5 +1,5 @@
 <?php
-require_once('configuration.php');
+require_once('mysql_config_db.php');
 
 class MYSQL_DB
 {
