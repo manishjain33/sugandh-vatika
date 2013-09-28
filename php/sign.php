@@ -12,9 +12,10 @@ class SIGN
 		$this->session = new SESSIONS();
 	}
 	
-	public function verify($username, $hash) {
+	public function verify($username, $hash, $remember=0) {
 		$user = $this->mInterface->getUserDetails($username);
-		if($hash == hash("sha256", $user["password"])) {
+
+		if($hash == $user["password"]) {
 			$_SESSION['user'] = $username;
 			return "SUCCESS";
 		} else {
@@ -24,8 +25,11 @@ class SIGN
 			*/
 			return "in";
 		}
+		//save username to cookie if required
+       		if($remember == 1)
+		     setCookie('username', $username);
 	}
-	
+
 	public function out() {
 		unset($_SESSION['user']);
 		$session->check();

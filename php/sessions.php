@@ -20,5 +20,6 @@ class SESSIONS
 	public function destroy() {
 		session_destroy();
 	}
+
 }
 ?>

@@ -1,0 +1,564 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #f0f0f0;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+textarea {
+    resize: none;
+}
+
+label {
+    font-weight: normal;
+}
+.custom-list-group {
+    margin-bottom: 0px;
+}
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.links {
+    padding-top: 10px;
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+    color: #b0b0b0;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
+    background-color: #777777;
+    color: #FFFFFF;
+}
+
+.navbar-brand {
+    padding: 10px !important;
+}
+
+.containt {
+    width: 100%;
+    padding-top: 250px;
+}
+
+.containt_other {
+    padding-top: 90px;
+    background-color: rgba(255,255,255,.9);
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.b_page {
+    padding: 10px 50px;
+}
+
+.search_box {
+    max-width: 600px;
+    padding: 19px 29px 29px;
+    margin: 0 auto 50px;
+    background-color: rgba(255,255,255,.9);
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.btn-started:hover, .btn-started:focus, .btn-started:active, .btn-started.active, .btn-started.disabled, .btn-started[disabled] {
+    background-color: #0790ef;
+    color: #FFFFFF;
+}
+
+.btn-started {
+    background-color: #0790ef;
+    background-image: linear-gradient(to bottom, #2bc1ff, #0790ef);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-select:hover, .btn-select:focus, .btn-select:active, .btn-select.active, .btn-select.disabled, .btn-select[disabled] {
+    background-color: #965397;
+    color: #FFFFFF;
+    background-image: linear-gradient(to bottom, #965397, #af6db0);
+}
+
+.btn-select {
+    background-color: #965397;
+    background-image: linear-gradient(to bottom, #af6db0, #965397);
+    background-repeat: repeat-x;
+    border-color: rgba(150,83,151,0.1) rgba(150,83,151,0.1) rgba(150,83,151,0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom:10px;
+}
+div [id*="errorMessage-"], div [id*="successMessage-"] {
+    display: none;
+}
+.pointer {
+    cursor: pointer;
+}
+#wrap > .container {
+    padding-top: 60px;
+}
+
+.container .credit {
+    margin: 20px 0;
+}
+
+.container .creditpic {
+    margin: 10px 0;
+}
+.color_gray {
+    background-color: #E6E7E8;
+}
+
+.color_green {
+    color: #009344;
+}
+
+.color-blue {
+    color: #2A388F;
+}
+
+.color-light-blue {
+    color: #3767e2;
+}
+
+
+.color-dark-green {
+    color: #006738;
+}
+
+.color-magenta {
+    color: #91268F;
+}
+
+.f22 {
+    font-size: 22px;
+}
+.f14 {
+    font-size: 14px;
+}
+.top-margin {
+    margin-top:4px;
+}
+.less_margin {
+    margin: 0 0 7px;
+}
+
+.less_p_bottom_margin {
+    margin-bottom: 0px;
+}
+
+.no-bold {
+    font-weight: normal;
+}
+
+.no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.no-padding-right {
+    padding-right: 0px;
+}
+
+.no-padding-left {
+    padding-left: 0px;
+}
+
+#business_top_links a:hover, #business_top_links a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.label-coffer {
+    background-color: #652C90;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.label-text-coffer {
+    color: #652C90;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+.label-cur-combo-price {
+    background-color: #F05A28;
+    line-height: 20px;
+    font-size: 16px;
+    border-radius: 0.125em 0.125em 0.125em 0.125em !important;
+}
+
+.label-poffer {
+    background-color: #58585B;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.label-text-poffer {
+    color: #58585B;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+.offer-code {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.label-pre-combo-price {
+    background-color: #58585B;
+    line-height: 20px;
+    font-size: 14px;
+    border-radius: 0.125em 0.125em 0.125em 0.125em !important;
+}
+
+.current-offer:after {
+    background-color: #F8F4F9;
+    border-radius: 4px 0 4px 0;
+    color: #9DA0A4;
+    font-size: 12px;
+    left: -1px;
+    padding: 3px 7px;
+    position: absolute;
+    top: -1px;
+}
+
+.current-offer {
+    background-color: #F8F4F9;
+    margin: 15px 0;
+    padding: 10px;
+    position: relative;
+}
+
+.previous-offer:after {
+    background-color: #F1F1F2;
+    border-radius: 4px 0 4px 0;
+    color: #9DA0A4;
+    font-size: 12px;
+    left: -1px;
+    padding: 3px 7px;
+    position: absolute;
+    top: -1px;
+}
+
+.previous-offer {
+    background-color: #F1F1F2;
+    margin: 15px 0;
+    padding: 10px;
+    position: relative;
+}
+
+.no-top-border {
+    border-top: 0px !important;
+}
+
+.no-left-padding {
+    padding-left: 0px;
+}
+
+.no-leftmargin {
+    margin-left: 0px;
+}
+
+.margin-bottom {
+    margin-bottom: 10px;
+}
+
+.pac-container {
+    z-index: 100000 !important;
+}
+
+#previousOffersContainer > div [class="col-lg-10"] a, #currentOffersContainer > div [class="col-lg-10"] a {
+    font-size: 14px;
+    font-style: italic;
+}
+#previousOffersContainer > div [class="col-lg-10"] a:hover, #currentOffersContainer > div [class="col-lg-10"] a:hover {
+    text-decoration:none; 
+}
+.new-div {
+    padding-top: 10px;
+}
+
+
+#itemCrumbsContainer > div [class*="col-lg-9"] p:first-child {
+    font-style: italic;
+}
+
+#itemCrumbsContainer > div [class="offerPrice"] {
+    margin-top: 20px;
+    font-weight: bold;
+}
+.defult-list-element {
+    text-align: center;
+    font-style: italic;
+    color: #bbbbbb;
+    font-size: 12px;
+}
+/*error 404 Page*/
+
+.box404 {
+    background-color: #000000;
+    min-height: 503px;
+    background-size: cover;
+    color: #ffffff;
+    padding: 3.55114% 4.26136%;
+    display: block;
+    text-rendering:optimizelegibility;  
+}
+.heading404 {
+    font-size: 10rem;
+    font-family:"museo-sans",sans-serif;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    color:inherit;
+    letter-spacing: -0.23em;
+    text-shadow:4px 0px 2px #58585B;    
+}
+.heading2404 {
+    font-size: 2em;
+    font-family: "museo-sans",sans-serif;
+    font-weight:100;
+    line-height: 1.5;
+}
+/*end error 404 Page*/
+/*Add category Page*/
+.div-parameter {
+    background-color: #F5F5F5;
+    border-radius: 4px 4px 4px 4px;
+    list-style: none outside none;
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    max-height: 350px;
+    overflow-y: auto;
+}
+.div-custom-par
+{
+    background-color: #F5F5F5;
+    border-radius: 4px 4px 4px 4px;
+    list-style: none outside none;
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    overflow-y: auto;
+    max-height: 299px;
+}
+.item-desc-oneline {
+    height: 24px;
+}
+.p-body ul {
+    float: left;
+    margin-left: 3px;    
+    border-radius: 4px 4px 4px 4px;
+    border:solid 1px #dddddd;
+}
+    .p-body ul li:first-child {
+        background-color: #e5e5e5;
+        padding:4px;
+    }
+/*End Add category Page*/
+/* Sticky footer styles
+      -------------------------------------------------- */
+
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+    height: 60px;
+}
+
+#footer {
+    background-color: #836262;
+    font-size: 11px;
+    color: #e5e5e5;
+}
+
+    #footer a {
+        color: #ffffff;
+    }
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (min-width: 768px) and (max-width: 979px) {
+    body {
+        background-image: none;
+        background-color: #836262 !important;
+    }
+
+    .b_page {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-image: none;
+        background-color: #836262 !important;
+    }
+
+    img {
+        margin-bottom: 10px;
+    }
+
+    #footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .containt {
+        width: 100%;
+        padding-top: 75px;
+    }
+
+    .b_page {
+        padding: 10px;
+    }
+
+    .row {
+        margin-right: 0px;
+    }
+
+    #itemCrumbsContainer > div [class="offerPrice"] {
+        margin-top: 0px;
+        font-weight: bold;
+    }
+
+    #businessDetailsForm [class="col-*"] {
+        padding-left: 0px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-image: none;
+        background-color: #836262 !important;
+    }
+
+    img {
+        margin-bottom: 10px;
+    }
+
+    .links {
+        padding-top: 0px;
+    }
+
+    .containt {
+        width: 100%;
+        padding-top: 0px;
+    }
+
+    .row {
+        margin-right: 0px;
+    }
+
+    .b_page {
+        padding: 10px;
+    }
+
+    .containt_other {
+        padding-top: 90px;
+    }
+
+    #itemCrumbsContainer > div [class="offerPrice"] {
+        margin-top: 0px;
+        font-weight: bold;
+    }
+
+    .col-6, .col-sm-4, .col-lg-4 {
+        padding-left: 0px !important;
+    }
+
+    #footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 307px) {
+    body {
+        background-image: none;
+        background-color: #F0F0F0 !important;
+    }
+
+    img {
+        margin-bottom: 10px;
+    }
+
+    .navbar-brand {
+        margin-left: 0px;
+        margin-right: 2px;
+        float: none;
+    }
+
+    .links {
+        padding-top: 0px;
+    }
+
+    .img-resize-small {
+        width: 35%;
+        margin-top: 0px;
+        padding-left: 10px;
+    }
+
+    .row {
+        margin-right: 0px;
+    }
+
+    .containt_other {
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    #itemCrumbsContainer > div [class="offerPrice"] {
+        margin-top: 0px;
+        font-weight: bold;
+    }
+
+    .col-6, .col-sm-4, .col-lg-4 {
+        padding-left: 0px !important;
+    }
+
+    #footer {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.form-signin input[type="text"], .form-signin input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+}
+
+.input-group {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+}

@@ -13,7 +13,7 @@ function sign($op) {
 	switch($op)
 	{
 		case "in":
-			echo $sign->verify($_POST['username'], $_POST['password']);
+			echo $sign->verify($_POST['username'], $_POST['password'], $_POST['remember']);
 			break;
 			
 		case "out":
