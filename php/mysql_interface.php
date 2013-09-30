@@ -17,5 +17,17 @@ class MYSQL_INTERFACE
 
 		return $this->db_object->getResultSet()[0];
 	}
+	
+	public function categoryAdd($queryPart) {
+		$query = "INSERT into categories set ".$queryPart;
+		return $this->db_object->query_db($query);
+	}
+	
+	public function categoryList() {
+		$query = "SELECT * from categories";
+		$this->db_object->query_db($query);
+		
+		return $this->db_object->getResultSet();
+	}
 }
 ?>
