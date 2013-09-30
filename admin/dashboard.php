@@ -1,3 +1,8 @@
+<?php
+require_once('/var/www/sugandh-vatika/php/sessions.php');
+$session = new SESSIONS();
+$session->check();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +42,7 @@
             	
                     <ul class="nav navbar-nav navbar-right links">
                    
-                        <li><a href="/sugandh-vatika/php/iface.php?util=login&fx=logout">Sign Out</a></li>
+                        <li><a href="/sugandh-vatika/php/iface.php?fx=sign&op=out">Sign Out</a></li>
                     </ul>
                     
             </div>

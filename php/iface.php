@@ -1,4 +1,6 @@
 <?php
+require_once("sign.php");
+
 switch($_GET['fx'])
 {
 	case "sign":
@@ -7,7 +9,7 @@ switch($_GET['fx'])
 }
 
 function sign($op) {
-	require_once("sign.php");
+	
 	$sign = new SIGN();
 	
 	switch($op)

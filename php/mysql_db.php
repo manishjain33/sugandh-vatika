@@ -8,7 +8,7 @@ class MYSQL_DB
 	
 	function connect() {
 		global $DB_HOSTNAME, $DB_USERNAME, $DB_PASSWORD, $DB_NAME;
-	
+		
 		//if database connection is already established, close the connection
 		if($this->connection != false) {
 			$this->disconnect();

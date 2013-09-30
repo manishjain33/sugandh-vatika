@@ -1,6 +1,6 @@
 <?php
-require_once("mysql_interface.php");
 require_once('sessions.php');
+require_once("mysql_interface.php");
 
 class SIGN
 {
@@ -14,7 +14,7 @@ class SIGN
 	
 	public function verify($username, $hash, $remember=0) {
 		$user = $this->mInterface->getUserDetails($username);
-
+		
 		if($hash == $user["password"]) {
 			$_SESSION['user'] = $username;
 			return "SUCCESS";
@@ -26,13 +26,13 @@ class SIGN
 			return "in";
 		}
 		//save username to cookie if required
-       		if($remember == 1)
+       	if($remember == 1)
 		     setCookie('username', $username);
 	}
 
 	public function out() {
 		unset($_SESSION['user']);
-		$session->check();
+		$this->session->check();
 	}
 }
 ?>
