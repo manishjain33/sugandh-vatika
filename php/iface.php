@@ -11,6 +11,10 @@ switch($_GET['fx'])
 	case "category":
 		category($_GET["op"]);
 		break;
+		
+	case "misc":
+		misc($_GET['op']);
+		break;
 }
 
 function sign($op) {
@@ -40,6 +44,21 @@ function category($op) {
 			
 		case "list":
 			echo json_encode($category->getList());
+			break;
+	}
+}
+
+function misc($op)
+{
+	require_once("misc.php");
+	$misc = new MISC();
+
+	switch($op)
+	{
+		case "getModules":
+			$modules = $misc->getModules();
+			if(gettype($modules) == "string") echo $modules;
+			else echo json_encode($modules);
 			break;
 	}
 }

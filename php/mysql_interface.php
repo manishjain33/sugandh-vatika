@@ -29,5 +29,19 @@ class MYSQL_INTERFACE
 		
 		return $this->db_object->getResultSet();
 	}
+	
+	public function misc_getUserModules($username) {
+		$query = "SELECT modules from users where username='".$username."'";
+		$this->db_object->query_db($query);
+	
+		return $this->db_object->getResultRow()[0];
+	}
+	
+	public function misc_getAllModules() {
+		$query = "SELECT * from modules";
+		$this->db_object->query_db($query);
+	
+		return $this->db_object->getResultSet();
+	}
 }
 ?>
