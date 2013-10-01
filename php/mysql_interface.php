@@ -15,7 +15,7 @@ class MYSQL_INTERFACE
 		$query = "SELECT * from users where username='".$this->db_object->escapeString($username)."'";
 		$this->db_object->query_db($query);
 
-		return $this->db_object->getResultSet()[0];
+		return $this->db_object->getResultSet();
 	}
 	
 	public function categoryAdd($queryPart) {

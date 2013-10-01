@@ -14,7 +14,9 @@ class SIGN
 	
 	public function verify($username, $hash, $remember=0) {
 		$user = $this->mInterface->getUserDetails($username);
-		
+		if(is_array($user)) $user = $user[0];
+		else return "ERROR";
+
 		if($hash == $user["password"]) {
 			$_SESSION['user'] = $username;
 			return "SUCCESS";
