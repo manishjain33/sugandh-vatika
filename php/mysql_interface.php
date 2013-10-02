@@ -34,7 +34,7 @@ class MYSQL_INTERFACE
 		$query = "SELECT modules from users where username='".$username."'";
 		$this->db_object->query_db($query);
 	
-		return $this->db_object->getResultRow()[0];
+		return $this->db_object->getResultRow();
 	}
 	
 	public function misc_getAllModules() {

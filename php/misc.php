@@ -18,9 +18,10 @@ class MISC
 		
 		$allowedModules = "";
 		$userModules = $this->mInterface->misc_getUserModules($_SESSION["user"]);
-		if($userModules == null) {
-			$allowedModules = "ERROR";
-		} else {
+		if(is_array($userModules)) $userModules = $userModules[0];
+		else return "ERROR";
+
+		
 			
 			$allowedModules = array();
 			$userModules = explode(",", $userModules);
@@ -29,7 +30,7 @@ class MISC
 					$allowedModules[$userModules[$i]] = $allModules[$userModules[$i]];
 				}
 			}
-		}
+		
 		
 		return $allowedModules;
 	}
