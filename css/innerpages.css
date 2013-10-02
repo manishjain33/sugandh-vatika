@@ -230,6 +230,13 @@ div [id*="errorMessage-"], div [id*="successMessage-"] {
     max-height: 350px;
     overflow-y: auto;
 }
+.defult-list-element {
+    text-align: center;
+    font-style: italic;
+    color: #bbbbbb;
+    font-size: 12px;
+}
+
 .div-custom-par
 {
     background-color: #F5F5F5;
