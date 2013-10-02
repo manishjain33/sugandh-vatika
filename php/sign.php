@@ -16,6 +16,12 @@ class SIGN
 		$user = $this->mInterface->getUserDetails($username);
 		if(is_array($user)) $user = $user[0];
 		else return "ERROR";
+		
+		//save username to cookie if required (before anything else)
+		if($remember == 1) {
+			setCookie('username', $username, time()+60*60*24*30);
+			setCookie('remember', $remember, time()+60*60*24*30);
+		}
 
 		if($hash == $user["password"]) {
 			$_SESSION['user'] = $username;
@@ -27,9 +33,6 @@ class SIGN
 			*/
 			return "in";
 		}
-		//save username to cookie if required
-       	if($remember == 1)
-		     setCookie('username', $username);
 	}
 
 	public function out() {
