@@ -40,9 +40,9 @@ label {
     color: #FFFFFF;
 }
 
-.navbar-brand {
+/*.navbar-brand {
     padding: 10px !important;
-}
+}*/
 
 .containt {
     width: 100%;
@@ -65,19 +65,6 @@ label {
     padding: 10px 50px;
 }
 
-.search_box {
-    max-width: 600px;
-    padding: 19px 29px 29px;
-    margin: 0 auto 50px;
-    background-color: rgba(255,255,255,.9);
-    border: 1px solid #e5e5e5;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-    box-shadow: 0 1px 2px rgba(0,0,0,.05);
-}
 
 .btn-started:hover, .btn-started:focus, .btn-started:active, .btn-started.active, .btn-started.disabled, .btn-started[disabled] {
     background-color: #0790ef;
@@ -189,85 +176,6 @@ div [id*="errorMessage-"], div [id*="successMessage-"] {
     color: #333333;
 }
 
-.label-coffer {
-    background-color: #652C90;
-    line-height: 20px;
-    font-size: 16px;
-}
-
-.label-text-coffer {
-    color: #652C90;
-    line-height: 20px;
-    font-size: 20px;
-}
-
-.label-cur-combo-price {
-    background-color: #F05A28;
-    line-height: 20px;
-    font-size: 16px;
-    border-radius: 0.125em 0.125em 0.125em 0.125em !important;
-}
-
-.label-poffer {
-    background-color: #58585B;
-    line-height: 20px;
-    font-size: 16px;
-}
-
-.label-text-poffer {
-    color: #58585B;
-    line-height: 20px;
-    font-size: 20px;
-}
-
-.offer-code {
-    font-style: italic;
-    font-weight: bold;
-}
-
-.label-pre-combo-price {
-    background-color: #58585B;
-    line-height: 20px;
-    font-size: 14px;
-    border-radius: 0.125em 0.125em 0.125em 0.125em !important;
-}
-
-.current-offer:after {
-    background-color: #F8F4F9;
-    border-radius: 4px 0 4px 0;
-    color: #9DA0A4;
-    font-size: 12px;
-    left: -1px;
-    padding: 3px 7px;
-    position: absolute;
-    top: -1px;
-}
-
-.current-offer {
-    background-color: #F8F4F9;
-    margin: 15px 0;
-    padding: 10px;
-    position: relative;
-}
-
-.previous-offer:after {
-    background-color: #F1F1F2;
-    border-radius: 4px 0 4px 0;
-    color: #9DA0A4;
-    font-size: 12px;
-    left: -1px;
-    padding: 3px 7px;
-    position: absolute;
-    top: -1px;
-}
-
-.previous-offer {
-    background-color: #F1F1F2;
-    margin: 15px 0;
-    padding: 10px;
-    position: relative;
-}
-
 .no-top-border {
     border-top: 0px !important;
 }
@@ -284,36 +192,6 @@ div [id*="errorMessage-"], div [id*="successMessage-"] {
     margin-bottom: 10px;
 }
 
-.pac-container {
-    z-index: 100000 !important;
-}
-
-#previousOffersContainer > div [class="col-lg-10"] a, #currentOffersContainer > div [class="col-lg-10"] a {
-    font-size: 14px;
-    font-style: italic;
-}
-#previousOffersContainer > div [class="col-lg-10"] a:hover, #currentOffersContainer > div [class="col-lg-10"] a:hover {
-    text-decoration:none; 
-}
-.new-div {
-    padding-top: 10px;
-}
-
-
-#itemCrumbsContainer > div [class*="col-lg-9"] p:first-child {
-    font-style: italic;
-}
-
-#itemCrumbsContainer > div [class="offerPrice"] {
-    margin-top: 20px;
-    font-weight: bold;
-}
-.defult-list-element {
-    text-align: center;
-    font-style: italic;
-    color: #bbbbbb;
-    font-size: 12px;
-}
 /*error 404 Page*/
 
 .box404 {
