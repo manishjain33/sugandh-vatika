@@ -25,5 +25,10 @@ class CATEGORY
 	{
 		return $this->mInterface->categoryList();
 	}
+	
+	public function remove($id)
+	{
+		return $this->mInterface->categoryRemove($id);
+	}
 }
 ?>

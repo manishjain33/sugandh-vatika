@@ -28,7 +28,7 @@ function sign($op) {
 			break;
 			
 		case "out":
-			$sign->out();
+			echo $sign->out();
 			break;
 	}
 }
@@ -42,8 +42,14 @@ function category($op) {
 			echo $category->add($_POST);
 			break;
 			
+		case "remove":
+			echo $category->remove($_GET['cid']);
+			break;
+			
 		case "list":
-			echo json_encode($category->getList());
+			$list = $category->getList();
+			if(gettype($list) == "string") echo $list;
+			echo json_encode($list);
 			break;
 	}
 }

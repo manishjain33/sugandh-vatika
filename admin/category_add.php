@@ -1,9 +1,13 @@
+<?php
+require_once('/var/www/sugandh-vatika/php/sessions.php');
+$session = new SESSIONS();
+$session->check();
+?>
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Sugandh Vatika</title>
+    <title>Administrator - Categories</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -37,7 +41,7 @@
                 </div>
                 <div class="collapse navbar-collapse navbar-ex1-collapse nav-collapse-scrollable ">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Dashboard</a></li>                        
+                        <li><a href="/sugandh-vatika/admin/dashboard.php">Dashboard</a></li>                        
                     </ul>
                     <ul class="nav navbar-nav navbar-right links">
                         <li>

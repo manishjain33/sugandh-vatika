@@ -2,6 +2,6 @@
 //Database configuration
 $DB_NAME = "sugandhVatika";
 $DB_USERNAME = "root";
-$DB_PASSWORD = "embarc";
+$DB_PASSWORD = "tushar";
 $DB_HOSTNAME = "localhost";
 ?>

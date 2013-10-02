@@ -8,7 +8,7 @@ $session->check();
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
-    <title>Dashboard</title>
+    <title>Administrator - Dashboard</title>
         <link href="/sugandh-vatika/css/normalize.css" rel="stylesheet">
 <link rel="stylesheet" href="/sugandh-vatika/css/bootstrap.min.css">
 <link href="/sugandh-vatika/css/admin_pages.css" rel="stylesheet">
@@ -35,13 +35,11 @@ $session->check();
                         <span class="icon-bar"></span>
                         
                     </button>
-                    <a class="navbar-brand" href="/sugandh-vatika/admin/dashboard.php">Sugandh Vatika
+                    <a class="navbar-brand" href="#">Sugandh Vatika
                     </a>
                 </div>
                 <div class="collapse navbar-collapse navbar-ex1-collapse nav-collapse-scrollable ">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Dashboard</a></li>                        
-                    </ul>
+                    
                     <ul class="nav navbar-nav navbar-right links">
                         <li>
                             <button class="btn btn-danger btn-sm logout">Sign out</button></li>

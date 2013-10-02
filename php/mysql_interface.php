@@ -23,6 +23,11 @@ class MYSQL_INTERFACE
 		return $this->db_object->query_db($query);
 	}
 	
+	public function categoryRemove($categoryID) {
+		$query = "DELETE FROM categories where id=".$categoryID;
+		return $this->db_object->query_db($query);
+	}
+	
 	public function categoryList() {
 		$query = "SELECT * from categories";
 		$this->db_object->query_db($query);

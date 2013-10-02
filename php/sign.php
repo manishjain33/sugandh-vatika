@@ -37,7 +37,8 @@ class SIGN
 
 	public function out() {
 		unset($_SESSION['user']);
-		$this->session->check();
+		$this->session->destroy();
+		return "SUCCESS";
 	}
 }
 ?>
