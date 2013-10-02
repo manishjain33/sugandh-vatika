@@ -16,6 +16,9 @@ body {
 .f12 {
     font-size: 12px;
 }
+.links {
+    padding-top: 10px;
+}
 
 .containt {
     overflow: hidden;

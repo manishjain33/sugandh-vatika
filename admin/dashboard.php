@@ -27,27 +27,28 @@ $session->check();
 </head>
 <body>
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    	<div class="container">
-        	<div class="navbar-header">
-            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                         <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         
                     </button>
-                <a class="navbar-brand" href="index.html">
-                        <img src="http://placehold.it/237x52" class="img-responsive img-resize-small" />
+                    <a class="navbar-brand" href="/sugandh-vatika/admin/dashboard.php">Sugandh Vatika
                     </a>
-            </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse nav-collapse-scrollable links">
-            	
-                    <ul class="nav navbar-nav navbar-right links">
-                   
-                        <li><a href="/sugandh-vatika/php/iface.php?fx=sign&op=out">Sign Out</a></li>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse nav-collapse-scrollable ">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Dashboard</a></li>                        
                     </ul>
-                    
+                    <ul class="nav navbar-nav navbar-right links">
+                        <li>
+                            <button class="btn btn-danger btn-sm logout">Sign out</button></li>
+                    </ul>
+                </div>
             </div>
-    	</div>
-    </nav>
+        </nav>
     <div class="containt ">
         <div class="gallery" id="modulesContainer">
             
