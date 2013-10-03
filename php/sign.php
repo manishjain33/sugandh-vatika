@@ -19,8 +19,11 @@ class SIGN
 		
 		//save username to cookie if required (before anything else)
 		if($remember == 1) {
-			setCookie('username', $username, time()+60*60*24*30);
-			setCookie('remember', $remember, time()+60*60*24*30);
+			setCookie('username', $username, time()+60*60*24*30, "/sugandh-vatika/");
+			setCookie('remember', $remember, time()+60*60*24*30, "/sugandh-vatika/");
+		} else {
+			setCookie('username', "", time()+60*60*24*30, "/sugandh-vatika/");
+			setCookie('remember', "", time()+60*60*24*30, "/sugandh-vatika/");
 		}
 
 		if($hash == $user["password"]) {
