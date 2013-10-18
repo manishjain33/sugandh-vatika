@@ -1,6 +1,7 @@
 <?php
 require_once("sign.php");
 require_once 'category.php';
+require_once 'packaging.php';
 
 switch($_GET['fx'])
 {
@@ -10,6 +11,10 @@ switch($_GET['fx'])
 		
 	case "category":
 		category($_GET["op"]);
+		break;
+		
+	case "packaging":
+		packaging($_GET["op"]);
 		break;
 		
 	case "misc":
@@ -48,6 +53,22 @@ function category($op) {
 			
 		case "list":
 			$list = $category->getList();
+			if(gettype($list) == "string") echo $list;
+			echo json_encode($list);
+			break;
+	}
+}
+
+function packaging($op) {
+	$packaging = new PACKAGING();
+	
+	switch($op) {
+		case "add":
+			echo $packaging->add($_POST);
+			break;
+			
+		case "list":
+			$list = $packaging->getList();
 			if(gettype($list) == "string") echo $list;
 			echo json_encode($list);
 			break;

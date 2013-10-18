@@ -54,7 +54,7 @@ CREATE TABLE `modules` (
   `image` varchar(128) NOT NULL,
   `href` varchar(128) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,8 +63,34 @@ CREATE TABLE `modules` (
 
 LOCK TABLES `modules` WRITE;
 /*!40000 ALTER TABLE `modules` DISABLE KEYS */;
-INSERT INTO `modules` VALUES (1,'Categories','Add or remove categories','/sugandh-vatika/images/products.png','/sugandh-vatika/admin/category_add.php'),(2,'Items','Add or remove items','/sugandh-vatika/images/items.png','/sugandh-vatika/admin/item_add.php');
+INSERT INTO `modules` VALUES (1,'Categories','Add or remove categories','/sugandh-vatika/images/products.png','/sugandh-vatika/admin/category_add.php'),(2,'Items','Add or remove items','/sugandh-vatika/images/items.png','/sugandh-vatika/admin/item_add.php'),(3,'Packagings','Create different types of packagings','/sugandh-vatika/images/packagings.png','/sugandh-vatika/admin/packaging_add.php');
 /*!40000 ALTER TABLE `modules` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `packagings`
+--
+
+DROP TABLE IF EXISTS `packagings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `packagings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `category` varchar(32) NOT NULL,
+  `metric` varchar(8) NOT NULL,
+  `value` varchar(16) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `packagings`
+--
+
+LOCK TABLES `packagings` WRITE;
+/*!40000 ALTER TABLE `packagings` DISABLE KEYS */;
+INSERT INTO `packagings` VALUES (1,'3','ml','10'),(2,'3','g','10'),(3,'3','l','15');
+/*!40000 ALTER TABLE `packagings` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -88,7 +114,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('admin','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918','1,2');
+INSERT INTO `users` VALUES ('admin','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918','1,2,3');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -101,4 +127,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-10-02 11:38:09
+-- Dump completed on 2013-10-18 22:45:48

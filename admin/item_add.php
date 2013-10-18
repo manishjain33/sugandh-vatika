@@ -76,22 +76,22 @@ $session->check();
                                     </div>
                                     <div class="col-6 col-sm-4 col-lg-4 no-padding-right">
                                         <div class="input-group" id="priceTooltip">
-                                            <span class="input-group-addon">$</span>
+                                            <span class="input-group-addon">₹</span>
                                             <input type="text" class="form-control margin-bottom" placeholder="Price" id="price" name="price">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12 no-padding">
-                                        <textarea placeholder="Description" rows="3" class="col-lg-12 form-control margin-bottom" name="description" id="description"></textarea>
+                                        <textarea placeholder="Describe this item..." rows="3" class="col-lg-12 form-control margin-bottom" name="description" id="description"></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group">
                                         <div class="col-lg-4">
-                                           <div class="input-group" id="">
-                                            <span class="input-group-addon">%</span>
+                                           <div class="input-group">
                                             <input type="text" class="form-control margin-bottom" placeholder="Discount" id="discount" name="discount">
+											<span class="input-group-addon">%</span>
                                         </div>
                                             
                                         </div>
