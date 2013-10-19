@@ -17,8 +17,7 @@ class CATEGORY
 			if(isset($key)) array_push($queryPart, $key."='".$value."'");
 		}
 		
-		if($this->mInterface->categoryAdd(join(",", $queryPart))) return "SUCCESS";
-		else return "ERROR";
+		return $this->mInterface->categoryAdd(join(",", $queryPart));
 	}
 	
 	public function getList()

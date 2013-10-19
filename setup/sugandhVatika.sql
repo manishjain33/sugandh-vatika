@@ -27,7 +27,7 @@ CREATE TABLE `categories` (
   `name` varchar(64) NOT NULL,
   `description` varchar(512) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,8 +36,43 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (3,'dfgdfg',''),(8,'hkj',''),(9,'iojk','');
+INSERT INTO `categories` VALUES (3,'dfgdfg',''),(8,'hkj',''),(9,'iojk',''),(10,'CZ','none'),(11,'1',''),(12,'MCM Electronics','gj');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `items`
+--
+
+DROP TABLE IF EXISTS `items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `items` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'item id',
+  `catid` int(11) NOT NULL COMMENT 'category id',
+  `name` varchar(64) NOT NULL COMMENT 'item name',
+  `price` varchar(16) NOT NULL COMMENT 'item price in rupees',
+  `description` varchar(256) NOT NULL COMMENT 'item description',
+  `stock` int(11) NOT NULL,
+  `img1` varchar(128) NOT NULL COMMENT 'image 1',
+  `img2` varchar(128) NOT NULL COMMENT 'image 2',
+  `img3` varchar(128) NOT NULL COMMENT 'image 3',
+  `img4` varchar(128) NOT NULL COMMENT 'image 4',
+  `img5` varchar(128) NOT NULL COMMENT 'image 5',
+  `discount` int(11) NOT NULL COMMENT 'only one discount',
+  `packagings` varchar(64) NOT NULL COMMENT 'comma separated ids of packagings',
+  `rating` int(11) NOT NULL COMMENT 'item rating',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `items`
+--
+
+LOCK TABLES `items` WRITE;
+/*!40000 ALTER TABLE `items` DISABLE KEYS */;
+/*!40000 ALTER TABLE `items` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -80,7 +115,7 @@ CREATE TABLE `packagings` (
   `metric` varchar(8) NOT NULL,
   `value` varchar(16) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,7 +124,7 @@ CREATE TABLE `packagings` (
 
 LOCK TABLES `packagings` WRITE;
 /*!40000 ALTER TABLE `packagings` DISABLE KEYS */;
-INSERT INTO `packagings` VALUES (1,'3','ml','10'),(2,'3','g','10'),(3,'3','l','15');
+INSERT INTO `packagings` VALUES (1,'3','ml','10'),(2,'3','g','10'),(3,'3','l','15'),(4,'3','g','6'),(5,'3','g','6'),(6,'3','g','7'),(7,'3','g','8'),(8,'3','g','9'),(9,'3','kg','11');
 /*!40000 ALTER TABLE `packagings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,4 +162,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-10-18 22:45:48
+-- Dump completed on 2013-10-19 20:01:53

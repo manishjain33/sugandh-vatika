@@ -17,8 +17,7 @@ class PACKAGING
 			if(isset($key)) array_push($queryPart, $key."='".$value."'");
 		}
 		
-		if($this->mInterface->packagingAdd(join(",", $queryPart))) return "SUCCESS";
-		else return "ERROR";
+		return $this->mInterface->packagingAdd(join(",", $queryPart));
 	}
 	
 	public function getList()

@@ -20,7 +20,8 @@ class MYSQL_INTERFACE
 	
 	public function categoryAdd($queryPart) {
 		$query = "INSERT into categories set ".$queryPart;
-		return $this->db_object->query_db($query);
+		$this->db_object->query_db($query);
+		return $this->db_object->getID();
 	}
 	
 	public function categoryRemove($categoryID) {
@@ -37,7 +38,8 @@ class MYSQL_INTERFACE
 	
 	public function packagingAdd($queryPart) {
 		$query = "INSERT into packagings set ".$queryPart;
-		return $this->db_object->query_db($query);
+		$this->db_object->query_db($query);
+		return $this->db_object->getID();
 	}
 	
 	public function packagingRemove($packagingID) {

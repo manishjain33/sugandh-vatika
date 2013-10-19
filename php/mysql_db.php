@@ -6,6 +6,7 @@ class MYSQL_DB
 	public $connection = false;
 	public $result = false;
 	
+	//connect to database
 	function connect() {
 		global $DB_HOSTNAME, $DB_USERNAME, $DB_PASSWORD, $DB_NAME;
 		
@@ -21,17 +22,20 @@ class MYSQL_DB
 		return $this->connection;
 	}
 	
+	//disconnect from database
 	function disconnect() {
 		if($this->connection == false) return;
 		$this->connection->close();
 		$this->connection = false;
 	}
 	
+	//query database
 	function query_db($query) {
 		$this->result = $this->connection->query($query);
 		return $this->result;
 	}
 	
+	//get a row from table
 	function getResultRow() {
 		if($this->result == false) return false;
 		
@@ -44,6 +48,7 @@ class MYSQL_DB
 		return $row;
 	}
 	
+	//get set of table rows
 	function getResultSet() {
 		if($this->result == false) return false;
 		
@@ -72,6 +77,12 @@ class MYSQL_DB
 		return $dataArray;
 	}
 	
+	//get auto-increment value of last insert query
+	function getID() {
+		return $this->connection->insert_id;
+	}
+	
+	//escape a string - mysql style
 	function escapeString($string) {
 		return $this->connection->real_escape_string($string);
 	}
