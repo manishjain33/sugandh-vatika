@@ -48,7 +48,7 @@ class ITEM
 	
 	public function removePic($id) {
 		//get image details from database
-		$result = $this->mInterface->item_imageGet($id);
+		$result = $this->mInterface->item_imageGet("id=$id");
 		
 		if(is_array($result)) {
 			$result = $result[0];
@@ -66,7 +66,7 @@ class ITEM
 	}
 	
 	public function getPic($itemid) {
-		return $this->mInterface->item_imageGet($itemid);
+		return $this->mInterface->item_imageGet("itemid=$itemid");
 	}
 }
 ?>

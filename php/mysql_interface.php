@@ -72,8 +72,8 @@ class MYSQL_INTERFACE
 		return $this->db_object->getID();
 	}
 	
-	public function item_imageGet($itemid) {
-		$query = "SELECT * FROM item_images where itemid=".$itemid;
+	public function item_imageGet($queryPart) {
+		$query = "SELECT * FROM item_images where ".$queryPart;
 		$this->db_object->query_db($query);
 		
 		return $this->db_object->getResultSet();
