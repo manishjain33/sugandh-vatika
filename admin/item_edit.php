@@ -106,16 +106,17 @@ $session->check();
                     <div class="row">
                     	<div class="col-lg-4 col-sm-4"><select class="form-control"><option>Category</option></select></div>
                         <div class="col-lg-4 col-sm-4"><select class="form-control" multiple><option>Packaging</option><option>Perfume</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option></select></div>
-                                            <div class="col-lg-1 col-sm-1">Quantity</div>
+						<div class="col-lg-1 col-sm-1">Quantity</div>
                     <div class="col-lg-3 col-sm-3"><input type="text" class="form-control margin-bottom" placeholder="∞" id="qty" name="qty"></div>
                     </div>
 
                 </form>
-                <div class="div-parameter">
+                <!--<div class="div-parameter">
                     <ul class="list-group custom-list-group" id="itemsCrumbsContainer">
                         <li class="list-group-item defult-list-element" id="itemDefaultText">No item available. Create a new item to get started.</li>
                     </ul>
-                </div>
+                </div>-->
+                
 
             </div>
         </div>

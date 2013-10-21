@@ -21,11 +21,13 @@ class MYSQL_INTERFACE
 	public function categoryAdd($queryPart) {
 		$query = "INSERT into categories set ".$queryPart;
 		$this->db_object->query_db($query);
+		
 		return $this->db_object->getID();
 	}
 	
 	public function categoryRemove($categoryID) {
 		$query = "DELETE FROM categories where id=".$categoryID;
+		
 		return $this->db_object->query_db($query);
 	}
 	
@@ -39,11 +41,13 @@ class MYSQL_INTERFACE
 	public function packagingAdd($queryPart) {
 		$query = "INSERT into packagings set ".$queryPart;
 		$this->db_object->query_db($query);
+		
 		return $this->db_object->getID();
 	}
 	
 	public function packagingRemove($packagingID) {
 		$query = "DELETE FROM packagings where id=".$packagingID;
+		
 		return $this->db_object->query_db($query);
 	}
 	
@@ -52,6 +56,33 @@ class MYSQL_INTERFACE
 		$this->db_object->query_db($query);
 		
 		return $this->db_object->getResultSet();
+	}
+	
+	public function itemAdd($queryPart) {
+		$query = "INSERT into items set ".$queryPart;
+		$this->db_object->query_db($query);
+		
+		return $this->db_object->getID();
+	}
+	
+	public function item_imageSave($queryPart) {
+		$query = "INSERT into item_images set ".$queryPart;
+		$this->db_object->query_db($query);
+		
+		return $this->db_object->getID();
+	}
+	
+	public function item_imageGet($itemid) {
+		$query = "SELECT * FROM item_images where itemid=".$itemid;
+		$this->db_object->query_db($query);
+		
+		return $this->db_object->getResultSet();
+	}
+	
+	public function item_imageRemove($id) {
+		$query = "DELETE FROM item_images where id='".$id."'";
+		
+		return $this->db_object->query_db($query);
 	}
 	
 	public function misc_getUserModules($username) {

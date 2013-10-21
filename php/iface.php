@@ -85,11 +85,19 @@ function item($op) {
 	
 	switch($op) {
 		case "add":
-			$item->add($_POST);
+			echo $item->add($_POST);
 			break;
 		
-		case "image":
-			echo $item->uploadPic();
+		case "image.add":
+			echo $item->uploadPic($_GET["itemid"]);
+			break;
+			
+		case "image.remove":
+			echo $item->removePic($_GET["id"]);
+			break;
+			
+		case "image.get":
+			echo json_encode($item->getPic($_GET["itemid"]));
 			break;
 	}
 }

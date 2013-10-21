@@ -183,11 +183,6 @@ div [id*="errorMessage-"], div [id*="successMessage-"] {
     font-weight: normal;
 }
 
-.no-padding {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
 .no-padding-right {
     padding-right: 0px;
 }
@@ -286,6 +281,39 @@ div [id*="errorMessage-"], div [id*="successMessage-"] {
         padding:4px;
     }
 /*End Add category Page*/
+.list_view{
+	text-align: left;
+	padding: 5px 6px;
+	margin: 0 0px -1px 0px;
+	line-height: 32px;
+	color: #555;	
+	position: relative;
+	border: 1px solid #edf1f5;
+	border-width: 1px 0;
+	font-size: 13px;
+	zoom: 1;
+}
+#list > ul > li:hover{
+	background-color: #ECF5FF;
+	border-color: #83b8dc;
+}
+ul{
+	list-style:none;}
+.col-1{
+	float: left;
+	width: 53%;
+	padding-top: 1px;
+}
+.col-2{
+	float: left;
+	width: 23%;
+	padding-top: 1px;
+}
+.col-3{
+	float: left;
+	padding-top: 1px;
+}
+
 /* Sticky footer styles
       -------------------------------------------------- */
 
@@ -369,6 +397,10 @@ div [id*="errorMessage-"], div [id*="successMessage-"] {
         background-image: none;
         background-color: #836262 !important;
     }
+.no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
 
     img {
         margin-bottom: 10px;
@@ -415,6 +447,10 @@ div [id*="errorMessage-"], div [id*="successMessage-"] {
         background-image: none;
         background-color: #F0F0F0 !important;
     }
+.no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
 
     img {
         margin-bottom: 10px;

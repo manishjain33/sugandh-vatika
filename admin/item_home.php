@@ -20,7 +20,7 @@ $session->check();
     <script src="/sugandh-vatika/js/jquery.validate.min.js"></script>
     <script src="/sugandh-vatika/js/cuteCrumbs.min.js"></script>
     <script src="/sugandh-vatika/js/sv.min.js"></script>
-    <script>window.sv = { 'pageID': "item.add" };</script>
+    <script>window.sv = { 'pageID': "item.home" };</script>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
@@ -51,36 +51,64 @@ $session->check();
         </nav>
         <div class="containt_other container">
             <div class="b_page">
-                <div class="alert alert-success" id="successMessage-1"><strong>Voila!</strong> a new item was added. </div>
+                <div class="alert alert-success" id="successMessage-1"><strong>Voila!</strong> a new item was added.</div>
+				<div class="alert alert-danger" id="errorMessage-1"><strong>Oh snap!</strong> An error occurred, please try again.</div>
                 <button type="button" class="btn btn-info btn-lg btn-block margin-bottom">Add Item</button>
+				<form class="form-horizontal" role="form" id="addItemForm">
 				<div class="row">
-                	<div class="col-lg-4">
-                    	<select class="form-control"><option>Catagory</option></select>
+                	<div class="col-lg-4 no-padding">
+                    	<select class="form-control margin-bottom" id="catid" name="catid"></select>
                     </div>
-                    <div class="col-lg-4">
-                    	<input type="text" class="form-control margin-bottom" id="name" name="name" placeholder="Name">
+                    <div class="col-lg-4 no-padding">
+                    	<input type="text" class="form-control margin-bottom" id="name" name="name" placeholder="Name" required>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-sm-4 no-padding">
                     	<div class="input-group" id="priceTooltip">
                         	<span class="input-group-addon">₹</span>
-                            	<input type="text" class="form-control margin-bottom" placeholder="Price" id="price" name="price">
+                            	<input type="text" class="form-control margin-bottom" placeholder="Price" id="price" name="price" required>
                         </div>
                     </div>
-                    <div class="col-lg-1">
-                    	<button type="button" class="btn btn-primary btn-sm pull-right"><i class="icon-ok"></i> </button>
+                    <div class="col-lg-1 no-padding">
+                    	<button type="submit" class="btn btn-primary btn-sm pull-right"><i class="icon-ok"></i></button>
                     </div>
                 </div>
+				</form>
 				<div class="row">
-                	<div class="col-lg-1">Catagory</div>
-                	<div class="col-lg-11 margin-bottom">
+                	<div class="col-lg-1 no-padding">Category</div>
+                	<div class="col-lg-11 no-padding margin-bottom">
                     	<select class="form-control"><option>All</option></select>
                     </div>
                 </div>
-                <div class="div-parameter">
+                <div class="row ">               	
+                    <div class="col-lg-12 col-sm-12" id="list">
+                    	<ul style="padding:0px;">
+                        	<li class="list_view">
+                            	<div class="col-1">sdfsfssdf</div>
+                                <div class="col-2">sdsfsfsfsdfsdf</div>
+                                <div class="col-3">2340-29029-2999</div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="list_view">
+                            	<div class="col-1">frt</div>
+                                <div class="col-2">rat</div>
+                                <div class="col-3">25-2999</div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="list_view">
+                            	<div class="col-1">sdfsfssdf</div>
+                                <div class="col-2">sdsfsfsfsdfsdf</div>
+                                <div class="col-3">2340-29029-2999</div>
+                                <div class="clearfix"></div>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <!--<div class="div-parameter">
                     <ul class="list-group custom-list-group" id="itemsCrumbsContainer">
                         <li class="list-group-item defult-list-element" id="itemDefaultText">No item available. Create a new item to get started.</li>
                     </ul>
-                </div>
+                </div>-->
 
             </div>
         </div>
