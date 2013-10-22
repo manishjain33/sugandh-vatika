@@ -41,6 +41,33 @@ INSERT INTO `categories` VALUES (3,'dfgdfg',''),(8,'hkj',''),(9,'iojk',''),(10,'
 UNLOCK TABLES;
 
 --
+-- Table structure for table `item_images`
+--
+
+DROP TABLE IF EXISTS `item_images`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `item_images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'unique id',
+  `itemid` int(11) NOT NULL COMMENT 'id of item associated with this image',
+  `name` varchar(64) NOT NULL,
+  `size` varchar(16) NOT NULL,
+  `path` varchar(128) NOT NULL COMMENT 'image path',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `item_images`
+--
+
+LOCK TABLES `item_images` WRITE;
+/*!40000 ALTER TABLE `item_images` DISABLE KEYS */;
+INSERT INTO `item_images` VALUES (1,2,'The-Dark-Knight-dark-knight--1920x1080.jpg','577229','../images/items/2/The-Dark-Knight-dark-knight--1920x1080.jpg'),(4,2,'Your Attitude.png','6225609','../images/items/2/Your Attitude.png'),(5,2,'the-amazing-spider-man-5v.jpg','1177006','../images/items/2/the-amazing-spider-man-5v.jpg');
+/*!40000 ALTER TABLE `item_images` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `items`
 --
 
@@ -54,16 +81,11 @@ CREATE TABLE `items` (
   `price` varchar(16) NOT NULL COMMENT 'item price in rupees',
   `description` varchar(256) NOT NULL COMMENT 'item description',
   `stock` int(11) NOT NULL,
-  `img1` varchar(128) NOT NULL COMMENT 'image 1',
-  `img2` varchar(128) NOT NULL COMMENT 'image 2',
-  `img3` varchar(128) NOT NULL COMMENT 'image 3',
-  `img4` varchar(128) NOT NULL COMMENT 'image 4',
-  `img5` varchar(128) NOT NULL COMMENT 'image 5',
   `discount` int(11) NOT NULL COMMENT 'only one discount',
   `packagings` varchar(64) NOT NULL COMMENT 'comma separated ids of packagings',
   `rating` int(11) NOT NULL COMMENT 'item rating',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,6 +94,7 @@ CREATE TABLE `items` (
 
 LOCK TABLES `items` WRITE;
 /*!40000 ALTER TABLE `items` DISABLE KEYS */;
+INSERT INTO `items` VALUES (1,3,'nexus','9k','',0,0,'',0),(2,3,'nexus','9k','',0,0,'',0);
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -98,7 +121,7 @@ CREATE TABLE `modules` (
 
 LOCK TABLES `modules` WRITE;
 /*!40000 ALTER TABLE `modules` DISABLE KEYS */;
-INSERT INTO `modules` VALUES (1,'Categories','Add or remove categories','/sugandh-vatika/images/products.png','/sugandh-vatika/admin/category_add.php'),(2,'Items','Add or remove items','/sugandh-vatika/images/items.png','/sugandh-vatika/admin/item_add.php'),(3,'Packagings','Create different types of packagings','/sugandh-vatika/images/packagings.png','/sugandh-vatika/admin/packaging_add.php');
+INSERT INTO `modules` VALUES (1,'Categories','Add or remove categories','/sugandh-vatika/images/products.png','/sugandh-vatika/admin/category_add.php'),(2,'Items','Add or remove items','/sugandh-vatika/images/items.png','/sugandh-vatika/admin/item_home.php'),(3,'Packagings','Create different types of packagings','/sugandh-vatika/images/packagings.png','/sugandh-vatika/admin/packaging_add.php');
 /*!40000 ALTER TABLE `modules` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,11 +134,12 @@ DROP TABLE IF EXISTS `packagings`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `packagings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) NOT NULL,
   `category` varchar(32) NOT NULL,
   `metric` varchar(8) NOT NULL,
   `value` varchar(16) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,7 +148,7 @@ CREATE TABLE `packagings` (
 
 LOCK TABLES `packagings` WRITE;
 /*!40000 ALTER TABLE `packagings` DISABLE KEYS */;
-INSERT INTO `packagings` VALUES (1,'3','ml','10'),(2,'3','g','10'),(3,'3','l','15'),(4,'3','g','6'),(5,'3','g','6'),(6,'3','g','7'),(7,'3','g','8'),(8,'3','g','9'),(9,'3','kg','11');
+INSERT INTO `packagings` VALUES (10,'100g Packs','8','g','100');
 /*!40000 ALTER TABLE `packagings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,4 +186,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-10-19 20:01:53
+-- Dump completed on 2013-10-22 19:31:24

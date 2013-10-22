@@ -20,6 +20,10 @@ class ITEM
 		return $this->mInterface->itemAdd(join(",", $queryPart));
 	}
 	
+	public function getByID($id) {
+		return $this->mInterface->itemGet_byKey("id", $id);
+	}
+	
 	public function uploadPic($itemid) {
 		$isUploaded = 0;
 		$isSaved = 0;
@@ -31,16 +35,20 @@ class ITEM
 		if(!is_dir($path)) mkdir($path, 0777, true);
 		
 		//file path
-		$path = $path . basename($_FILES['file']['name']);
+		$filename = basename($_FILES['file']['name']);
+		$path = $path . $filename;
 		
 		//move uploaded file to its appropriate location
 		if (move_uploaded_file($_FILES['file']['tmp_name'], $path)) {
 			$isUploaded = 1;
 		}
 		
+		//calculate filesize
+		$filesize = filesize($path);
+		
 		//if file has been uploaded successfully, save details in database
 		if($isUploaded == 1) {
-			return $this->mInterface->item_imageSave("itemid=$itemid,path='$path'");
+			return $this->mInterface->item_imageSave("itemid=$itemid,path='$path',name='$filename',size='$filesize'");
 		} else {
 			return 0;
 		}

@@ -65,6 +65,13 @@ class MYSQL_INTERFACE
 		return $this->db_object->getID();
 	}
 	
+	public function itemGet_byKey($key, $value) {
+		$query = "SELECT * FROM items where $key='$value'";
+		$this->db_object->query_db($query);
+		
+		return $this->db_object->getResultSet();
+	}
+	
 	public function item_imageSave($queryPart) {
 		$query = "INSERT into item_images set ".$queryPart;
 		$this->db_object->query_db($query);

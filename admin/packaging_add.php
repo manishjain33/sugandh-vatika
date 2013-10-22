@@ -56,14 +56,22 @@ $session->check();
                 <h4>Add Packaging</h4>
                 <div class="alert alert-success" id="successMessage-1"><strong>Voila!</strong> a new packaging was added. </div>
                 <form class="form-horizontal" role="form" id="addPackagingForm">
+					<div class="form-group">
+                        <label for="name" class="col-lg-2 control-label margin-bottom">Name</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control margin-bottom" id="name" name="name" required>
+                        </div>
+                    </div>
+					
                     <div class="form-group">
                         <label for="category" class="col-lg-2 control-label margin-bottom">Category</label>
                         <div class="col-lg-6">
                             <select class="form-control" id="category" name="category"></select>
                         </div>
                     </div>
+					
                     <div class="form-group">
-                        <label for="category" class="col-lg-2 control-label margin-bottom">Metric System</label>
+                        <label for="metric" class="col-lg-2 control-label margin-bottom">Metric System</label>
                         <div class="col-lg-6">
                             <select class="form-control" id="metric" name="metric">
                             	<option value="g">grams</option>
@@ -73,12 +81,14 @@ $session->check();
                             </select>
                         </div>
                     </div>
+					
                     <div class="form-group">
-                        <label for="category" class="col-lg-2 control-label margin-bottom">Value</label>
+                        <label for="value" class="col-lg-2 control-label margin-bottom">Value</label>
                         <div class="col-lg-6">
                             <input type="text" class="form-control margin-bottom" id="value" name="value" required>
                         </div>
                     </div>
+					
                     <div class="form-group">
                         <div class="col-lg-offset-2 col-lg-6">
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Add</button>

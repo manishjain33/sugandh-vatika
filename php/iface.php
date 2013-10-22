@@ -87,6 +87,10 @@ function item($op) {
 		case "add":
 			echo $item->add($_POST);
 			break;
+			
+		case "get.id":
+			echo json_encode($item->getByID($_GET["id"]));
+			break;
 		
 		case "image.add":
 			echo $item->uploadPic($_GET["itemid"]);

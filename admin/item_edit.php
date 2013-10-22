@@ -78,8 +78,8 @@ $session->check();
                     	<div class="col-lg-12 margin-bottom">
                         	
                         	<div style="min-height:inherit; padding:0px;">
-                            <div class="dd-default"></div>
-                        	<div class="img_upload dropzone-previews" id="img_upload">
+                            <div class="dd-default dropzoneContainer"></div>
+                        	<div class="img_upload dropzone-previews dropzoneContainer" id="img_upload">
                             	
 							</div>
                             </div>
@@ -89,7 +89,7 @@ $session->check();
                     <div class="row">
                     	<div class="col-lg-4"><input type="text" class="form-control margin-bottom" id="name" name="name" placeholder="Name"></div>
                         <div class="col-lg-4 col-sm-4">
-                            <select class="form-control"><option>10% off</option></select>
+                            <select class="form-control" id="discount" name="discount"></select>
                         </div>
                         <div class="col-lg-4 col-sm-4">
                             <div class="input-group" id="priceTooltip">
@@ -100,16 +100,15 @@ $session->check();
                     </div>
                     <div class="row margin-bottom">
                     	<div class="col-lg-12 col-sm-12">
-                        	<textarea class="form-control" rows="4"></textarea>
+                        	<textarea class="form-control" rows="4" placeholder="Describe this item..." id="description" name="description"></textarea>
                         </div>
                     </div>
                     <div class="row">
-                    	<div class="col-lg-4 col-sm-4"><select class="form-control"><option>Category</option></select></div>
-                        <div class="col-lg-4 col-sm-4"><select class="form-control" multiple><option>Packaging</option><option>Perfume</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option><option>Agar</option></select></div>
+						<div class="col-lg-4 col-sm-4"><select class="form-control" id="catid" name="catid"></select></div>
+                        <div class="col-lg-4 col-sm-4"><select class="form-control" id="packagings" name="packagings" multiple></select></div>
 						<div class="col-lg-1 col-sm-1">Quantity</div>
-                    <div class="col-lg-3 col-sm-3"><input type="text" class="form-control margin-bottom" placeholder="∞" id="qty" name="qty"></div>
+						<div class="col-lg-3 col-sm-3"><input type="text" class="form-control margin-bottom" placeholder="∞" id="qty" name="qty"></div>
                     </div>
-
                 </form>
                 <!--<div class="div-parameter">
                     <ul class="list-group custom-list-group" id="itemsCrumbsContainer">
