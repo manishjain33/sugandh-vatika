@@ -24,6 +24,7 @@ DROP TABLE IF EXISTS `categories`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `discountid` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
   `description` varchar(512) NOT NULL,
   PRIMARY KEY (`id`)
@@ -36,7 +37,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (3,'dfgdfg',''),(8,'hkj',''),(9,'iojk',''),(10,'CZ','none'),(11,'1',''),(12,'MCM Electronics','gj');
+INSERT INTO `categories` VALUES (3,0,'dfgdfg',''),(8,0,'hkj',''),(9,0,'iojk',''),(10,0,'CZ','none'),(11,0,'1',''),(12,0,'MCM Electronics','gj');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,7 +82,7 @@ CREATE TABLE `items` (
   `price` varchar(16) NOT NULL COMMENT 'item price in rupees',
   `description` varchar(256) NOT NULL COMMENT 'item description',
   `stock` int(11) NOT NULL,
-  `discount` int(11) NOT NULL COMMENT 'only one discount',
+  `discountid` int(11) NOT NULL COMMENT 'only one discount',
   `packagings` varchar(64) NOT NULL COMMENT 'comma separated ids of packagings',
   `rating` int(11) NOT NULL COMMENT 'item rating',
   PRIMARY KEY (`id`)
@@ -112,7 +113,7 @@ CREATE TABLE `modules` (
   `image` varchar(128) NOT NULL,
   `href` varchar(128) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -121,7 +122,7 @@ CREATE TABLE `modules` (
 
 LOCK TABLES `modules` WRITE;
 /*!40000 ALTER TABLE `modules` DISABLE KEYS */;
-INSERT INTO `modules` VALUES (1,'Categories','Add or remove categories','/sugandh-vatika/images/products.png','/sugandh-vatika/admin/category_add.php'),(2,'Items','Add or remove items','/sugandh-vatika/images/items.png','/sugandh-vatika/admin/item_home.php'),(3,'Packagings','Create different types of packagings','/sugandh-vatika/images/packagings.png','/sugandh-vatika/admin/packaging_add.php');
+INSERT INTO `modules` VALUES (1,'Categories','Add or remove categories','/sugandh-vatika/images/products.png','/sugandh-vatika/admin/category_add.php'),(2,'Items','Add or remove items','/sugandh-vatika/images/items.png','/sugandh-vatika/admin/item_home.php'),(3,'Packagings','Create different types of packagings','/sugandh-vatika/images/packagings.png','/sugandh-vatika/admin/packaging_add.php'),(4,'Discounts','Add/Remove discounts','/sugandh-vatika/images/discounts.png','/sugandh-vatika/admin/discount_home.php');
 /*!40000 ALTER TABLE `modules` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -173,7 +174,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('admin','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918','1,2,3');
+INSERT INTO `users` VALUES ('admin','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918','1,2,3,4');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -186,4 +187,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-10-22 19:31:24
+-- Dump completed on 2013-10-24 10:41:25

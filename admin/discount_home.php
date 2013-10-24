@@ -7,7 +7,7 @@ $session->check();
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Administrator - Categories</title>
+    <title>Administrator - Discount</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -48,27 +48,35 @@ $session->check();
         </nav>
         <div class="containt_other container">
             <div class="b_page">
-                <h4>Add a category</h4>
-                <div class="alert alert-success" id="successMessage-1"><strong>Voila!</strong> a new category was added. </div>
+                <h4>Add a discount</h4>
+                <div class="alert alert-success" id="successMessage-1"><strong>Voila!</strong> a new discount was added. </div>
                 <form class="form-horizontal" role="form" id="addCategoryForm">
                     <div class="form-group">
-                        <label for="category" class="col-lg-2 control-label margin-bottom">Category</label>
+                        <label for="discount_name" class="col-lg-2 control-label margin-bottom">Discount Name</label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control margin-bottom" id="name" name="name" required>
+                            <input type="text" class="form-control margin-bottom" id="dname" name="dname" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="discount_name" class="col-lg-2 control-label margin-bottom">Discount Type</label>
+                        <div class="col-lg-6">
+							<div class="btn-group" data-toggle="buttons">
+                              <label class="btn btn-primary active">
+                                <input type="radio" name="type" value="p"> %
+                              </label>
+                              <label class="btn btn-primary">
+                                <input type="radio" name="type" value="r"> ₹
+                              </label>
+                            </div>
+
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="discount" class="col-lg-2 control-label margin-bottom">Discount</label>
                         <div class="col-lg-6">
-                            <select class="form-control margin-bottom" id="discountid" name="discount"><option>10% discount</option></select>
+                            <input type="text" class="form-control margin-bottom" id="discount" name="discount" required>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="category" class="col-lg-2 control-label margin-bottom">Description</label>
-                        <div class="col-lg-6">
-                            <textarea class="form-control margin-bottom" rows="3" id="description" name="description"></textarea>
-                        </div>
-                    </div>
+                    </div>                    
                     <div class="form-group">
                         <div class="col-lg-offset-2 col-lg-6">
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Add</button>

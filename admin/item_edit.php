@@ -89,7 +89,7 @@ $session->check();
                     <div class="row">
                     	<div class="col-lg-4"><input type="text" class="form-control margin-bottom" id="name" name="name" placeholder="Name"></div>
                         <div class="col-lg-4 col-sm-4">
-                            <select class="form-control" id="discount" name="discount"></select>
+                            <select class="form-control" id="discountid" name="discountid"></select>
                         </div>
                         <div class="col-lg-4 col-sm-4">
                             <div class="input-group" id="priceTooltip">
