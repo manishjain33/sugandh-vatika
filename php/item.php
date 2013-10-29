@@ -24,6 +24,10 @@ class ITEM
 		return $this->mInterface->itemGet_byKey("id", $id);
 	}
 	
+	public function getAll() {
+		return $this->mInterface->item_getList();
+	}
+	
 	public function uploadPic($itemid) {
 		$isUploaded = 0;
 		$isSaved = 0;

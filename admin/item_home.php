@@ -81,7 +81,7 @@ $session->check();
                 </div>
                 <div class="row ">               	
                     <div class="col-lg-12 col-sm-12" id="list">
-                    	<ul style="padding:0px;">
+                    	<ul style="padding:0px;" id="itemsList">
                         	<li class="list_view">
                             	<div class="col-1">sdfsfssdf</div>
                                 <div class="col-2">sdsfsfsfsdfsdf</div>

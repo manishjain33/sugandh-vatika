@@ -60,7 +60,7 @@ $session->check();
                     <div class="form-group">
                         <label for="discount" class="col-lg-2 control-label margin-bottom">Discount</label>
                         <div class="col-lg-6">
-                            <select class="form-control margin-bottom" id="discountid" name="discount"><option>10% discount</option></select>
+                            <select class="form-control margin-bottom" id="discountid" name="discountid"><option>10% discount</option></select>
                         </div>
                     </div>
                     <div class="form-group">

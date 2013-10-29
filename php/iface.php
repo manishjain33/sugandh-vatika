@@ -88,6 +88,10 @@ function item($op) {
 			echo $item->add($_POST);
 			break;
 			
+		case "list":
+			echo json_encode($item->getAll());
+			break;
+			
 		case "get.id":
 			echo json_encode($item->getByID($_GET["id"]));
 			break;

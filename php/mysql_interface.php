@@ -92,6 +92,13 @@ class MYSQL_INTERFACE
 		return $this->db_object->query_db($query);
 	}
 	
+	public function item_getList() {
+		$query = "SELECT * from items";
+		$this->db_object->query_db($query);
+		
+		return $this->db_object->getResultSet();
+	}
+	
 	public function misc_getUserModules($username) {
 		$query = "SELECT modules from users where username='".$username."'";
 		$this->db_object->query_db($query);

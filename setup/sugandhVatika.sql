@@ -28,7 +28,7 @@ CREATE TABLE `categories` (
   `name` varchar(64) NOT NULL,
   `description` varchar(512) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (3,0,'dfgdfg',''),(8,0,'hkj',''),(9,0,'iojk',''),(10,0,'CZ','none'),(11,0,'1',''),(12,0,'MCM Electronics','gj');
+INSERT INTO `categories` VALUES (3,0,'dfgdfg',''),(8,0,'hkj',''),(9,0,'iojk',''),(10,0,'CZ','none'),(11,0,'1',''),(12,0,'MCM Electronics','gj'),(13,10,'Perfume','kewl!');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -187,4 +187,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-10-24 10:41:25
+-- Dump completed on 2013-10-30  0:58:48
