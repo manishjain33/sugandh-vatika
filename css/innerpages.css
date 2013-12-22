@@ -153,34 +153,14 @@ div [id*="errorMessage-"], div [id*="successMessage-"] {
 .less_p_bottom_margin {
     margin-bottom: 0px;
 }
-.img_upload{
-	min-height:250px !important;
-		border:2px #CCC dashed !important;
-		cursor:pointer;
-}
-.dd-default{
-	cursor:pointer;
-	opacity: 1;
-	-ms-filter: none;
-	filter: none;
-	-webkit-transition: opacity 0.3s ease-in-out;
-	-moz-transition: opacity 0.3s ease-in-out;
-	-o-transition: opacity 0.3s ease-in-out;
-	-ms-transition: opacity 0.3s ease-in-out;
-	transition: opacity 0.3s ease-in-out;
-	background-image: url("../dropzone/images/spritemap.png");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	position: absolute;
-	width: 428px;
-	height: 123px;
-	margin-left: -214px;
-	margin-top: -61.5px;
-	top: 50%;
-	left: 50%;
-}
+
 .no-bold {
     font-weight: normal;
+}
+
+.no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .no-padding-right {
@@ -281,39 +261,6 @@ div [id*="errorMessage-"], div [id*="successMessage-"] {
         padding:4px;
     }
 /*End Add category Page*/
-.list_view{
-	text-align: left;
-	padding: 5px 6px;
-	margin: 0 0px -1px 0px;
-	line-height: 32px;
-	color: #555;	
-	position: relative;
-	border: 1px solid #edf1f5;
-	border-width: 1px 0;
-	font-size: 13px;
-	zoom: 1;
-}
-#list > ul > li:hover{
-	background-color: #ECF5FF;
-	border-color: #83b8dc;
-}
-ul{
-	list-style:none;}
-.col-1{
-	float: left;
-	width: 53%;
-	padding-top: 1px;
-}
-.col-2{
-	float: left;
-	width: 23%;
-	padding-top: 1px;
-}
-.col-3{
-	float: left;
-	padding-top: 1px;
-}
-
 /* Sticky footer styles
       -------------------------------------------------- */
 
@@ -397,10 +344,6 @@ ul{
         background-image: none;
         background-color: #836262 !important;
     }
-.no-padding {
-    padding-left: 0px;
-    padding-right: 0px;
-}
 
     img {
         margin-bottom: 10px;
@@ -447,10 +390,6 @@ ul{
         background-image: none;
         background-color: #F0F0F0 !important;
     }
-.no-padding {
-    padding-left: 0px;
-    padding-right: 0px;
-}
 
     img {
         margin-bottom: 10px;
